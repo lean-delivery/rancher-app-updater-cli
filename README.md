@@ -4,11 +4,11 @@
 
 Preconditions
 
-Helm charts should contain "container.image.tag"
+Helm charts should contain "${service_name}.container.image.tag"
 
 Set following environment variables
 
-* RANCHER_TOKEN
+* RANCHER_TOKEN (i.e. token-1j90s21:0h12809h1pi2ohs12s912hp9812hep9128he1298eh12smd)
 * RANCHER_BASE_URL
 * RANCHER_API_VERSION
 * K8S_CLUSTER_NAME
@@ -18,6 +18,8 @@ Set following environment variables
 * SERVICE_NAME
 * IMAGE_NAME
 * TAG_NAME
+
+> When generating the API token in Rancher please leave parameter `scope` untouched.
 
 Run cli
 ```bash
