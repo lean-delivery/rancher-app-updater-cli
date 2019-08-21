@@ -1,4 +1,9 @@
-# Update 
+## Introduction
+This tool is developed for integration into CI / CD pipeline for upgrading the corresonding `pods` over `Rancher API`.
+### Matching stack
+* Rancher ([info](https://rancher.com/))
+* Kubernetes ([info](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/))
+* Helm charts ([info](https://helm.sh/))
 
 ## How to use it
 
