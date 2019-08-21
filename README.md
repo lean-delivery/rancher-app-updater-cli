@@ -5,8 +5,18 @@
 Preconditions
 
 Helm charts should contain "${service_name}.container.image.tag"
+Sample of the helm chart's `values.yaml` file:
+```yaml=
+yourApplication:
+  name: app-name
+  container:
+    image:
+      repository: registry/app-name
+      tag: develop
+      pullPolicy: IfNotPresent
+```
 
-Set following environment variables
+Set the following environment variables
 
 * RANCHER_TOKEN (i.e. token-1j90s21:0h12809h1pi2ohs12s912hp9812hep9128he1298eh12smd)
 * RANCHER_BASE_URL
@@ -21,13 +31,14 @@ Set following environment variables
 
 > When generating the API token in Rancher please leave parameter `scope` untouched.
 
-Run cli
+Call the tool in CLI:
 ```bash
 $ charts-updater-cli
 ```
 
 ## Docker Images
 
+```sh
+# https://hub.docker.com/r/leandelivery/rancher-app-updater-cli
 docker pull leandelivery/rancher-app-updater-cli:latest
-
-https://hub.docker.com/r/leandelivery/rancher-app-updater-cli
+```
